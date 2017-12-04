@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="personagemCellIdentifier" rowHeight="53" id="KGk-i7-Jjw" customClass="PersonagemTableViewCell" customModule="TrabalhoFinalPedro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="52.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ken" translatesAutoresizingMaskIntoConstraints="NO" id="7ie-NL-cSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="52.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52.5" id="1iu-2H-woS"/>
+                            <constraint firstAttribute="width" constant="50" id="4ft-cj-tl0"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ZlQ-hW-BUG"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="alb-ad-lgq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lblNome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg3-Ew-kCi">
+                        <rect key="frame" x="58" y="0.0" width="262" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lblNacionalidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fK-QN-54I">
+                        <rect key="frame" x="58" y="29.5" width="262" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ZO-Fn-LYP">
+                        <rect key="frame" x="270" y="11" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="1fK-QN-54I" secondAttribute="bottom" constant="2" id="FR6-i8-ORG"/>
+                    <constraint firstAttribute="trailing" secondItem="6ZO-Fn-LYP" secondAttribute="trailing" constant="1" id="K0j-53-S1z"/>
+                    <constraint firstItem="1fK-QN-54I" firstAttribute="leading" secondItem="7ie-NL-cSJ" secondAttribute="trailing" constant="8" id="Ksa-a4-uJr"/>
+                    <constraint firstAttribute="trailing" secondItem="1fK-QN-54I" secondAttribute="trailing" id="QJi-to-WRO"/>
+                    <constraint firstItem="vg3-Ew-kCi" firstAttribute="leading" secondItem="7ie-NL-cSJ" secondAttribute="trailing" constant="8" id="dvD-61-5cP"/>
+                    <constraint firstItem="7ie-NL-cSJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fEh-ES-bhi"/>
+                    <constraint firstAttribute="bottom" secondItem="7ie-NL-cSJ" secondAttribute="bottom" id="gTm-Uj-LdL"/>
+                    <constraint firstItem="vg3-Ew-kCi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kfa-Yu-CPd"/>
+                    <constraint firstAttribute="trailing" secondItem="vg3-Ew-kCi" secondAttribute="trailing" id="kxv-V5-VmY"/>
+                    <constraint firstItem="7ie-NL-cSJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rar-5Y-DTW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="Icone" destination="7ie-NL-cSJ" id="qle-FY-UHl"/>
+                <outlet property="nacionalidade" destination="1fK-QN-54I" id="vwc-o1-JMv"/>
+                <outlet property="nome" destination="vg3-Ew-kCi" id="XE9-A1-jJN"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="56.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ken" width="128" height="128"/>
+    </resources>
+</document>
